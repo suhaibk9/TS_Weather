@@ -4,10 +4,10 @@ import { WeekRow } from "./WeekRow";
 
 const MainData = (): React.JSX.Element => {
   return (
-    <div className="w-9/12 bg-[#f6f6f8] h-full text-black flex flex-col justify-start">
+    <div className="w-9/12 bg-[#f6f6f8] min-h-full text-black flex flex-col justify-start pb-8 rounded-r-4xl">
       <TopRow />
       <WeekRow />
-      <div>Today's Highlight </div>
+      <div className="px-7 text-2xl font-semibold my-5">Today's Highlight </div>
       <HighlightRow />
     </div>
   );
