@@ -170,7 +170,7 @@ const forecastApi = api.injectEndpoints({
         };
       },
       keepUnusedDataFor: 300,
-      providesTags: (result, error, { city }) => [
+      providesTags: (_result, _error, { city }) => [
         {
           type: "Weather",
           id: city || "DEFAULT",

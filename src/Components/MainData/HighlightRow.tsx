@@ -1,4 +1,4 @@
-import { HighlightCard } from "../HIghlightCard";
+import { HighlightCard } from "../HighlightCard";
 import { useAppSelector } from "../../hooks/typedHooks";
 import { useGetCurrentWeatherQuery } from "../../Api/getCityData";
 

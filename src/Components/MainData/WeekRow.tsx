@@ -7,7 +7,7 @@ const WeekRow = () => {
     (state) => state.information,
   );
 
-  const { data, isLoading, error } = useGetForecastDataQuery(
+  const { data, isLoading } = useGetForecastDataQuery(
     { city: cityName },
     { skip: !cityName },
   );
@@ -40,8 +40,7 @@ const WeekRow = () => {
             timeStr += " AM";
           } else {
             const hour12 = Number(timeStr.split(":")[0]) - 12;
-            timeStr =
-              (hour12 === 0 ? "12" : hour12.toString()) + ":00" + " PM";
+            timeStr = (hour12 === 0 ? "12" : hour12.toString()) + ":00" + " PM";
           }
           return (
             <TempCard

@@ -11,7 +11,7 @@ export const UpperHalf = (): React.JSX.Element => {
   const dispatch = useAppDispatch();
   const { cityName, typeTemp } = useAppSelector((state) => state.information);
   const isC = typeTemp === "C";
-  const { data, isLoading, error } = useGetCurrentWeatherQuery(
+  const { data, error } = useGetCurrentWeatherQuery(
     { city: cityName },
     { skip: !cityName },
   );

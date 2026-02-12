@@ -29,6 +29,8 @@ export interface CurrentWeather {
   vis_km: number;
   air_quality: AirQuality;
   pressure_mb: number;
+  precip_mm: number;
+  precip_in: number;
   gust_kph: number;
   wind_dir: string;
 }
@@ -111,7 +113,7 @@ export const weatherApi = api.injectEndpoints({
         };
       },
       keepUnusedDataFor: 300, // keep cache 5 mins
-      providesTags: (result, error, { city }) => [
+      providesTags: (_result, _error, { city }) => [
         { type: "Weather", id: city || "DEFAULT" },
       ],
     }),
