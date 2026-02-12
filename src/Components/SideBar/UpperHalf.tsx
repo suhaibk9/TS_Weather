@@ -16,12 +16,12 @@ export const UpperHalf = (): React.JSX.Element => {
     { skip: !cityName },
   );
   useEffect(() => {
-    if (error) {
+    if (error && cityName !== "Liverpool") {
       window.alert("City not found. Reverting back to Liverpool.");
       dispatch(updateCityName("Liverpool"));
       setInputVal("Liverpool");
     }
-  }, [error]);
+  }, [error, cityName, dispatch]);
   return (
     <div className="h-1/2 w-full p-6">
       <div className="flex rounded-md overflow-hidden border border-black">
